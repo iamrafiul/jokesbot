@@ -50,7 +50,8 @@ else
 	case $MESSAGE in
 		'/joke')
 			#startproc "./question"
-			startproc "./jokes"
+			#startproc "./jokes"
+			startproc "./joke_gui.sh"
 			;;
 		'/info')
 			send_message "${USER[ID]}" "This is bashbot, the Telegram bot written entirely in bash."
