@@ -3,19 +3,15 @@
 
 DIALOG=gdialog || DIALOG=dialog
 
-data=$($DIALOG --inputbox "`$GETTEXT \"Enter a Country Name:\"`" 8 35 3>&2 2>&1 1>&3) || end
-#echo $GETTEXT;
+while true
+do
+	data=$($DIALOG --title "Select acountry" --menu "Select a country:" 10 30 5 USA USA UK UK Belgium Belgium France France Dummy Dummy Exit Exit 3>&2 2>&1 1>&3) || end
 
-#choice=$($DIALOG --title "Selection a country" --menu "Command" 15 50 8 \
-#	  "$(cat "USA")" "USA" \
-#	  "$(cat "UK")" "UK" \
-#	  "$(cat "Belgium")" "Belgium" \
-#	    3>&2 2>&1 1>&3)|| end
+	echo "Given Data is: $data"	
 
-#$data=#GETTEXT;
+	if [[ "$data" = "Exit" ]]; then
+		break
+	fi
 
-echo "Given Data is: $data"
-
-bash jokes.sh "$data"
-
-exit
+	bash jokes.sh "$data"
+done
