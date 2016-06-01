@@ -29,11 +29,20 @@ Then go to telegram, find joke_bot and type "/start". This command will initiate
 To add a new joke from a country not listed, simply do 
 
 ```bash
-bash teachBot.sh "<country" "<jokes>"
+bash teachBot.sh "<country>" "<jokes>"
 ```
+For example, to add a joke from country ABC you have write
+
+```bash
+bash teachBot.sh ABC "The joke with double-quotation"
+```
+
+
+Work in progress(Almost Done)
+
+- TUI application similar to GUI but runs in the command line
 
 Yet to be done:
 
-- TUI application similar to GUI but runs in the command line(Work in progress.....)
 - Localise the GUI application to Bengali language.
 - Create an xinetd configuartion to enable running the bot as a daemon
