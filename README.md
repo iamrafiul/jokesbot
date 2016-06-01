@@ -16,7 +16,18 @@ Usage
 Create a file called token and place your bot token inside
 run bash bashbot start inside the project directory
 Send /start Message to your bot .( In this case @joke_bot)
-To add a new joke from a country not listes, simply do 
+
+To see jokes from different contries first run the app using the following command:
+
+'''
+bash bashbot.sh start
+'''
+
+Then go to telegram, find joke_bot and type "/start". This command will initiate our app in telegram app and you will get the list of commands from the text it will provide.
+
+**** For the GUI application, the command is /joke****
+
+To add a new joke from a country not listed, simply do 
 
 ```bash
 bash teachBot.sh "<country" "<jokes>"
@@ -24,6 +35,6 @@ bash teachBot.sh "<country" "<jokes>"
 
 Yet to be done:
 
-- GUI application to interact with teachBot and make it easier to add languages
-- Localise the GUI application to arabic language.
+- TUI application similar to GUI but runs in the command line(Work in progress.....)
+- Localise the GUI application to Bengali language.
 - Create an xinetd configuartion to enable running the bot as a daemon
