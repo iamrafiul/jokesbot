@@ -19,13 +19,15 @@ Send /start Message to your bot .( In this case @joke_bot)
 
 To see jokes from different contries first run the app using the following command:
 
-'''
+```bash
 bash bashbot.sh start
-'''
+```
 
 Then go to telegram, find joke_bot and type "/start". This command will initiate our app in telegram app and you will get the list of commands from the text it will provide.
 
-**** For the GUI application, the command is /joke****
+```bash 
+For the GUI application, the command is /joke
+```
 
 To add a new joke from a country not listed, simply do 
 
