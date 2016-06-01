@@ -18,7 +18,9 @@ run bash bashbot start inside the project directory
 Send /start Message to your bot .( In this case @joke_bot)
 To add a new joke from a country not listes, simply do 
 
+```bash
 bash teachBot.sh "<country" "<jokes>"
+```
 
 Yet to be done:
 
