@@ -1,0 +1,11 @@
+# default: on
+# description: xinetd server for the jokebot application
+service jokebot
+{
+        flags           = REUSE
+        socket_type     = stream
+        wait            = no
+        user            = nobody
+        server          = /usr/local/bin/njokebot
+        disable         = no
+}
