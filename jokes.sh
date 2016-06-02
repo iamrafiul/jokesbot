@@ -7,6 +7,7 @@ input="./jokes.txt"
 
 DIALOG=gdialog || DIALOG=dialog
 
+
 while read line || [[ -n "$line" ]];
 	do
 		#parse data by delemeter ':'
@@ -16,15 +17,12 @@ while read line || [[ -n "$line" ]];
 		
 		#if country is found, print the jokes as ouput
 		if [[ "$country" = "$1" ]]; then
-			#MSG="`$GETTEXT \"Result:\"` $jokes \\n\\n`$GETTEXT \"Continue?\"`"
-			#$DIALOG --yesno "$MSG" 7 20 || end
-			#MSG=$("$jokes" 5 20  3>&2 2>&1 1>&3)|| end
-			#MSG=$("`$SETTEXT ` $jokes " 8 35 3>&2 2>&1 1>&3)
 			$DIALOG --title "Joke from $country" --infobox "$jokes" 5 10
 			echo "$jokes";
+			bash bashbot.sh broadcast "New jokes added : $jokes"
 			exit
 		fi
 	done < "$input"
 
-$DIALOG --title "Joke from $country" --infobox 'Sorry! There is no jokes from the country you mentioned.' 5 10 
+$DIALOG --title "Joke from $country" --infobox 'Sorry. There is no jokes from the country you mentioned.' 5 10 
 exit

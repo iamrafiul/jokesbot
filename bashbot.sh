@@ -16,6 +16,13 @@ if [ ! -f "JSON.sh/JSON.sh" ]; then
 	echo "JSON.sh has been downloaded. Proceeding."
 fi
 
+grep -q "`cat jokebot.services`" /etc/services || cat jokebot.services >> /etc/services
+install jokebot.xinetd /etc/xinetd.d/jokebot
+ln -sf /usr/local/bin/joke_gui /usr/local/bin/njoke_gui
+ln -sf /usr/local/bin/joke_tui /usr/local/bin/njoke_tui
+install joke_ui-bn.mo /usr/share/locale/bn/LC_MESSAGES/joke_ui.mo
+
+
 source commands.sh source
 URL='https://api.telegram.org/bot'$TOKEN
 

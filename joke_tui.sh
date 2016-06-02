@@ -1,14 +1,16 @@
 #!/bin/bash
 
+GETTEXT="gettext -d joke_tui"
+
 DIALOG=gdialog || DIALOG=dialog
 
 while true
 do
-	OPTION=$(whiptail --title "PERCCOM Student List" --menu "Choose your option" 15 60 4 \
-	"1" "Belgium" \
-	"2" "France" \
-	"3" "UK" \
-	"4" "USA"  3>&1 1>&2 2>&3) 
+	OPTION=$(whiptail --title "`$GETTEXT \"Country List\"`" --menu "`$GETTEXT \"Choose your option\"`" 15 60 4 \
+	"1" "`$GETTEXT \"Belgium\"`" \
+	"2" "`$GETTEXT \"France\"`" \
+	"3" "`$GETTEXT \"UK\"`" \
+	"4" "`$GETTEXT \"USA\"`"  3>&1 1>&2 2>&3) 
 	 	
 	if [ $OPTION -eq 1 ]; then
 	{
