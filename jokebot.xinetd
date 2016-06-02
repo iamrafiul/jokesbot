@@ -6,6 +6,6 @@ service jokebot
         socket_type     = stream
         wait            = no
         user            = nobody
-        server          = /usr/local/bin/njokebot
+        server          = /usr/local/bin/jokebot
         disable         = no
 }
