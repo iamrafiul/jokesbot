@@ -42,7 +42,3 @@ bash teachBot.sh ABC "The joke with double-quotation"
 bash joke_tui.sh
 ```
 
-Work in progress
-
-- Localise the GUI application to Bengali language.
-- Create an xinetd configuartion to enable running the bot as a daemon
